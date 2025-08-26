@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="decription"
+      content="A Well-structured content using lists, tables, and media. A complete HTML5 form including a variety of input fields. Correct use of form attributes such as placeholder, required, autocomplete, and readonly. HTML5 validation features implemented correctly across all relevant fields. A clear, accessible layout using semantic tags." />
+    <title>Enhanced HTML5 Web Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      header,
+      footer {
+        background-color: #f2f2f2;
+        padding: 15px;
+        text-align: center;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #cccccc;
+        padding: 10px;
+        text-align: left;
+      }
+      fieldset {
+        margin-bottom: 20px;
+        padding: 15px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Enhanced HTML5 Page</h1>
+      <p>Showcasing Lists, Tables, Media, and a Validated Form</p>
+    </header>
+
+    <main>
+      <!-- Section: Lists -->
+      <section>
+        <h2>Top 3 Programming Languages</h2>
+        <ol>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Go</li>
+        </ol>
+
+        <h3>Why Learn These?</h3>
+        <ul>
+          <li>High demand in the job market</li>
+          <li>Strong community support</li>
+          <li>Powerful and versatile for many applications</li>
+        </ul>
+      </section>
+
+      <!-- Section: Table -->
+      <section>
+        <h2>Language Comparison Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Language</th>
+              <th>Typing</th>
+              <th>Use Cases</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Python</td>
+              <td>Dynamic</td>
+              <td>Data Science, Web Development</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>Dynamic</td>
+              <td>Web, Mobile, Desktop Apps</td>
+            </tr>
+            <tr>
+              <td>Go</td>
+              <td>Static</td>
+              <td>Backend, Systems Programming</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section: Media -->
+      <section>
+        <h2>Sample Media</h2>
+        <figure>
+          <img
+            src="https://cdn.pixabay.com/photo/2014/07/08/09/58/html5-386614_640.jpg"
+            alt="HTML Image"
+            width="240"
+            height="240" />
+          <figcaption>A simple placeholder image</figcaption>
+        </figure>
+
+        <audio controls>
+          <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+
+      <!-- Section: HTML5 Form -->
+      <section>
+        <h2>Contact Us</h2>
+        <form action="#" method="post" autocomplete="on">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name *</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+              minlength="2"
+              placeholder="John Doe" />
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="email@example.com" />
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="^\d{10}$" placeholder="1234567890" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username *</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="4"
+              maxlength="15" />
+
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" required minlength="6" />
+
+            <label for="confirm-password">Confirm Password *</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+              minlength="6" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+              <option value="">--Select--</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+            </select>
+
+            <label>Subscribe to Newsletter?</label>
+            <label><input type="radio" name="subscribe" value="yes" required /> Yes</label>
+            <label><input type="radio" name="subscribe" value="no" required /> No</label>
+
+            <label for="comments">Comments</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              placeholder="Your message..."></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Confirmation</legend>
+            <label for="referral">Referral Code</label>
+            <input type="text" id="referral" name="referral" value="N/A" readonly />
+
+            <label>
+              <input type="checkbox" name="agree" required />
+              I agree to the <a href="#">terms and conditions</a>.
+            </label>
+          </fieldset>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Enhanced Web Page | Designed for HTML5 Form Validation</p>
+    </footer>
+  </body>
+</html>
